@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Welcome To Shelf</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <!--<h2>Welcome to Shelf!</h2>-->
+            <div class="title"><h1>What book will you read today?</h1></div>
+            <form id="generate-form" method="post" action="/">
+                <div id="form-select">
+                    <select id="type" name="type" required>
+                        <option value="">(Type)</option>
+                        <option value="Anything">Anything!</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                    </select>
+                    <select id="genre" name="genre" required>
+                        <option value="">(Genre)</option>
+                        <option value="Anything">Anything!</option>
+                        <option value="Classics">Classics</option>
+                        <option value="Classics">Comics/Graphic Novels</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Health">Horror</option>
+                        <option value="Realistic/Literary">Realistic/Literary</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Poetry">Poetry</option>
+                        <option value="(Auto)biography">(Auto)biographies</option>
+                        <option value="Business">Business</option>
+                        <option value="Cookbook">Cookbook</option>
+                        <option value="Economy/Finance">Economy/Finance</option>
+                        <option value="Environment/Nature">Environment/Nature</option>
+                        <option value="Health">Health</option>
+                        <option value="History/Society">History/Society</option>
+                        <option value="Relationships">Relationships</option>
+                        <option value="Self-Help">Self-Help</option>
+                        <option value="Miscellaneous">Miscellaneous</option>
+                    </select>
+                    <select id="length" name="length" required>
+                        <option value="">(Length)</option>
+                        <option value="Anything">Anything!</option>
+                        <option value="Short">Short, Less than 250 pages</option>
+                        <option value="Medium">Medium, 250 to 499 pages</option>
+                        <option value="Long">Long, 500 or more pages</option>
+                    </select>
+                </div>
+                <button id="submit" type="submit">Find A Book ➵</button>
+            </form>
+        </div>
+        <div id="footer">
+            <p>Shelf | A Project by SeanLYL</p>
+        </div>
+    </body>
+    
+</html>

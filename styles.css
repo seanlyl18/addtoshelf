@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: calc(100vh - 40px);
+    background: linear-gradient(0deg, #341a00bb 60%, #8c4a26ae), url(https://images.unsplash.com/photo-1554290410-4be2dfbe66f8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3MlMjBvbiUyMGElMjBzaGVsZnxlbnwwfHwwfHx8MA%3D%3D);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    align-items:center;
+    justify-content: center;
+}
+h2 {
+    font-size: 1.25rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 4.5rem;
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style:italic;
+    margin-bottom: 40px;
+}
+.title {
+    width: 80%;
+}
+#generate-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#suggest-form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#form-text {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+#form-text p {
+    width: fit-content;
+    margin-top: 15px;
+    color: white; 
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+input[type=text] {
+    width: 47%;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 2.75rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px rgba(255, 255, 255, 0.5) solid;
+}
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+  }
+input[type=text]:hover {
+    border-bottom: 2px rgba(255, 255, 255) solid;
+    transition: 0.3s;
+}
+
+label {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label span {
+    width: fit-content;
+    color: white; 
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+#review {
+    width: 80%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#form-select {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+select {
+    background-color: transparent;
+    width: 175px;
+    height: 40px;
+    padding: 5px;
+    border: 4px white double;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+select:hover {
+    background-color: white;
+    color: black;
+    border: 2px #341a00bb double;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.book-details {
+    max-width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    margin-bottom: 3%;
+}
+.book-details img {
+    width: 275px;
+}
+.book-details div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.book-details div h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    letter-spacing: 0.1rem;
+    text-align: left;
+}
+.book-details div p {
+    color: white; 
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+}
+.book-details div h2 span {
+    color: white; 
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem;
+}
+.details-1 {
+    margin-bottom: 5px;
+}
+.divider {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    margin-bottom: 5px;
+}
+/*.line {
+    width: 100px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}*/
+.review-text {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 200;
+    letter-spacing: 0.75rem;
+    margin-bottom: 15px;
+}
+
+.recommend {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #412100bb;
+    border: 3px white double;
+}
+.recommend p{
+    text-align: center;
+    color: white; 
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    margin-bottom: 5px;
+}
+
+button, a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+button:hover, a:hover {
+    color: #cd6700bb;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#footer {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #generate-form {
+        gap: 40px;
+    }
+    #form-select {
+        width: 175px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #form-text {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #form-text input[type=text] {
+        width: 100%;
+        font-size: 2.25rem;
+    }
+    label {
+        margin-top: 0;
+    }
+    label span {
+        font-size: 1.25rem;
+    }
+    .book-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .book-details img {
+        width: 60%;
+    }
+    .book-details div h1{
+        font-size: 1.5rem;
+    }
+    .book-details div h2, .book-details div h2 span{
+        font-size: 1rem;
+    }
+    .book-details div p {
+        font-size: 0.75rem;
+    }
+    .recommend p {
+        font-size: 0.75rem;
+    }
+    .recommend a {
+        font-size: 1.25rem;
+    }
+
+}
