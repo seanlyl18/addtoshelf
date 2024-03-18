@@ -122,8 +122,6 @@ def suggest():
         ssl._create_default_https_context = ssl._create_unverified_context
         # note: this might create "huge security concerns", but it was mentioned in the context of scraping
 
-        apikey  = 'AIzaSyDw7YjvHQkgxesJJT3UNvGVQC-SI9Scswc'
-
         gbook_query = 'https://www.googleapis.com/books/v1/volumes?q=' + query_title + '&inauthor:' + query_author
         with urlopen(gbook_query) as response:
             body = response.read().decode()
