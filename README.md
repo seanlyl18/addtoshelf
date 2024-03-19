@@ -27,7 +27,7 @@ The "books" table is the heart of the entire database, containing the foreign ke
 Storing the authors names are more complicated, as books can be co-authored by multiple writers. So, a many-to-many relationship exists between the "writers" and "books" tables, with "authors" being the intermediate table where its primary key is the combination of the 2 foreign keys. 
 
 ### Suggesting Books
-The form on the homepage was designed to be filled in very quickly with simple but effective client-side validation using dropdown menus (<select> elements). However, the Suggest page's form required users to type in text by themselves, and hence server-side validation was needed to prevent duplication of entries into the databse. Google Books and its search functionw was used to iron this out. By using the keywords (title and author's/authors' name) and adding them into a query URL (Google Books API), the search results data were returned in JSON. 
+The form on the homepage was designed to be filled in very quickly with simple client-side validation using dropdown menus. However, the Suggest page's form requires user text input, hence server-side validation was needed to prevent duplication of entries into the database. Google Books and its search functionw was used to iron this out. By using the keywords (title and author's/authors' name) and adding them into a query URL (Google Books API), the search results data were returned in JSON. 
 
 After parsing through it and the necessary information (GBook ID, exact title and author, and book page count). the data is used to check whether the book existed in the database or not. If it doesn't exist, all the data will be added to and commited. If it does exist, the details that were not validated (i.e. the type and genre) would be updated and a review will be added, enabling a book recommendation to be self-corrected if one user accidentally inputs an inaccurate detail. 
 
@@ -39,5 +39,4 @@ After parsing through it and the necessary information (GBook ID, exact title an
 
 ### Troubleshooting
 If the error is "database is locked", write the changes in the DB browser before running Flask. 
-
 If there are any errors, bugs or difficulties running the app, feel free to raise an issue on this repo or email me (seanlyl18@gmail.com)
